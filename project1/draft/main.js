@@ -3,8 +3,6 @@
 let drawingWidth = 500;
 let drawingHeight = 500;
 
-let lionx = drawingWidth; // original x of body
-let liony = drawingHeight; // original y of doby
 
 /*  Variable that enables you to "talk to" your SVG drawing canvas. */
 let drawing = d3.select("#canvas")
@@ -20,156 +18,156 @@ let border = drawing.append("rect")
 
 /* Draw a lion */
 
-let lionleftear = drawing.append("circle")
-.attr("cx", lionx-455)
-.attr("cy", liony-445)
+let lionLeftEar = drawing.append("circle")
+.attr("cx", 60) //Horizontal
+.attr("cy", 70)
 .attr("r", 40)
 .attr("fill", "#94754d") //brown
 // .attr("fill", "transparent") 
 // .attr("stroke", "black");
 
-let lionrightear = drawing.append("circle")
-.attr("cx", lionx-315)
-.attr("cy", liony-445)
+let lionRightEar = drawing.append("circle")
+.attr("cx", 200)
+.attr("cy", 70)
 .attr("r", 40)
 .attr("fill", "#94754d") //brown
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionhead = drawing.append("circle")
-.attr("cx", lionx-385)
-.attr("cy", liony-440)
+let lionHead = drawing.append("circle")
+.attr("cx", 130)
+.attr("cy", 75)
 .attr("r", 55)
 .attr("fill", "#94754d") //brown
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionleftcheek = drawing.append("ellipse")
-.attr("cx", lionx-435)
-.attr("cy", liony-345)
+let lionLeftCheek = drawing.append("ellipse")
+.attr("cx", 80)
+.attr("cy", 160)
 .attr("rx", 60)
 .attr("ry", 85)
 .attr("fill", "#94754d") //brown
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionrightcheek = drawing.append("ellipse")
-.attr("cx", lionx-335)
-.attr("cy", liony-345)
+let lionRightCheek = drawing.append("ellipse")
+.attr("cx", 180)
+.attr("cy", 160)
 .attr("rx", 60)
 .attr("ry", 85)
 .attr("fill", "#94754d") //brown
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionchin = drawing.append("circle")
-.attr("cx", lionx-385)
-.attr("cy", liony-270)
+let lionChin = drawing.append("circle")
+.attr("cx", 130)
+.attr("cy", 230)
 .attr("r", 55)
 .attr("fill", "#94754d") //brown
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionleftearinside = drawing.append("circle")
-.attr("cx", lionx-460)
-.attr("cy", liony-450)
-.attr("r", 28)
+let lionLeftEarInside = drawing.append("circle")
+.attr("cx", 55)
+.attr("cy", 65)
+.attr("r", 20)
 .attr("fill", "#d8ab70") //beight
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionreightearinside = drawing.append("circle")
-.attr("cx", lionx-310)
-.attr("cy", liony-450)
-.attr("r", 28)
+let lionReightEarInside = drawing.append("circle")
+.attr("cx", 200)
+.attr("cy", 65)
+.attr("r", 20)
 .attr("fill", "#d8ab70") //beight
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionface = drawing.append("circle")
-.attr("cx", lionx-385)
-.attr("cy", liony-390)
-.attr("r", 52)
+let lionFace = drawing.append("circle")
+.attr("cx", 125)
+.attr("cy", 120)
+.attr("r", 60)
 .attr("fill", "#d8ab70") //beight
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionnose = drawing.append("circle")
-.attr("cx", lionx-385)
-.attr("cy", liony-350)
+let lionNose = drawing.append("circle")
+.attr("cx", 125)
+.attr("cy", 160)
 .attr("r", 25)
 .attr("fill", "black")
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionmouth = drawing.append("polyline")
-.attr("points", closedPolygon(80,185,
-                            150,185,
-                            130,210,
-                            100,210))
+let lionMouth = drawing.append("polyline")
+.attr("points", closedPolygon(80,185, // Corner Left Up
+                            180,185, // Corner Rigth Up
+                            140,220, // Corner Rigth Down
+                            110,220)) // Corner Left Down
 .attr("fill", "black")
-// .attr("fill", "transparent")
-// .attr("stroke", "black");
+//.attr("fill", "transparent")
+//.attr("stroke", "black");
 
-let lionleftsnout = drawing.append("circle")
-.attr("cx", lionx-405)
-.attr("cy", liony-330)
-.attr("r", 25)
+let lionLeftSnout = drawing.append("circle")
+.attr("cx", 95)
+.attr("cy", 180)
+.attr("r", 30)
 .attr("fill", "#d8ab70") //beight
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionrightsnout = drawing.append("circle")
-.attr("cx", lionx-365)
-.attr("cy", liony-330)
-.attr("r", 25)
+let lionRightSnout = drawing.append("circle")
+.attr("cx", 155)
+.attr("cy", 180)
+.attr("r", 30)
 .attr("fill", "#d8ab70") //beight
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lionwhisker1 = drawing.append("line")
-.attr("x1", 80)
-.attr("x2", 30)
-.attr("y1", 165)
-.attr("y2", 150)
+let lionWhisker1 = drawing.append("line")
+.attr("x1", 90) //Horizontal R 
+.attr("x2", 40) // Horizontal L
+.attr("y1", 170) // Vertical R
+.attr("y2", 160) // Vertical L
 .attr("stroke", "black");
 // .attr("fill", "transparent")
 
-let lionwhisker2 = drawing.append("line")
-.attr("x1", 80)
-.attr("x2", 30)
-.attr("y1", 170)
-.attr("y2", 190)
+let lionWhisker2 = drawing.append("line")
+.attr("x1", 90) //Horizontal R 
+.attr("x2", 40) // Horizontal L
+.attr("y1", 180) // Vertical R
+.attr("y2", 200) // Vertical L
 .attr("stroke", "black");
 // .attr("fill", "transparent")
 
-let lionwhisker3 = drawing.append("line")
-.attr("x1", 200)
-.attr("x2", 150)
-.attr("y1", 150)
-.attr("y2", 165)
+let lionWhisker3 = drawing.append("line")
+.attr("x1", 200) //Horizontal R 
+.attr("x2", 150) // Horizontal L
+.attr("y1", 160) // Vertical R
+.attr("y2", 170) // Vertical L
 .attr("stroke", "black");
 // .attr("fill", "transparent")
 
-let lionwhisker4 = drawing.append("line")
-.attr("x1", 200)
-.attr("x2", 150)
-.attr("y1", 190)
-.attr("y2", 170)
+let lionWhisker4 = drawing.append("line")
+.attr("x1", 200) //Horizontal R 
+.attr("x2", 150) // Horizontal L
+.attr("y1", 200) // Vertical R
+.attr("y2", 180) // Vertical L
 .attr("stroke", "black");
 // .attr("fill", "transparent")
 
-let lioneyeleft = drawing.append("circle")
-.attr("cx", lionx-410)
-.attr("cy", liony-405)
+let lionEyeLeft = drawing.append("circle")
+.attr("cx", 100)
+.attr("cy", 110)
 .attr("r", 10)
 .attr("fill", "black")
 // .attr("fill", "transparent")
 // .attr("stroke", "black");
 
-let lioneyerigth = drawing.append("circle")
-.attr("cx", lionx-360)
-.attr("cy", liony-405)
+let lionEyeRigth = drawing.append("circle")
+.attr("cx", 150)
+.attr("cy", 110)
 .attr("r", 10)
 .attr("fill", "black")
 // .attr("fill", "transparent")
