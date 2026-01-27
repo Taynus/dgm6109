@@ -30,7 +30,8 @@ function processForm() {
 }
 
 function validateData() {
-    // DIAMOND: ZIP is 5 digits
+    
+// DIAMOND: ZIP is 5 digits
 if (userZip.length !== 5 || isNaN(amount)) {
         output("Please enter a valid ZIP number!");
         valid = false;
@@ -40,11 +41,13 @@ if (userZip.length !== 5 || isNaN(amount)) {
     return true;
 }
 
+ // DIAMOND: ¿3 or more? (For Pizza and Hamburger)
 function evaluateAnswers() {
     let subtotal = price * amount;
     let discount = 0;
 
-    // Pizza & Salad
+// Pizza & Salad e. coli message
+// If the user select the Pizza combo and the Zip code start with 9, the message appear
     if (price === 12) {
         if (userZip.startsWith("9")) {
             output("e. coli outbreak, Pizza & Salad is not available in this region");
@@ -52,7 +55,8 @@ function evaluateAnswers() {
         }
     }
 
-    // DIAMOND: ¿3 or more? (For Pizza and Hamburger)
+// DIAMOND: ¿3 or more? (For Pizza and Hamburger)
+// If th user select 3 or more combos of Pizza or Hamburger, the discount is applied
     if (amount >= 3) {
         if (price === 12) {
             discount = subtotal * 0.25;
@@ -62,6 +66,8 @@ function evaluateAnswers() {
         }
     }
 
+
+// Here is the operation to obtain the total of the order, with or without discount
     let total = subtotal - discount;
 
     output("Subtotal: $" + subtotal.toFixed(2) + 
