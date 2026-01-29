@@ -1,0 +1,71 @@
+/* 1. Change the default font */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* 2. Add space between the elements you have built */
+header, section, figure {
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 3. Add a different hover and focus state styling to the in-text link */
+p a {
+    color: rgb(200, 0, 0);
+    text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
+p a:hover, 
+p a:focus {
+    color: rgb(0, 0, 200);
+    background-color: #05b9e6;
+    text-decoration: none;
+}
+
+/* 4. Add a different hover and focus state styling to the image inside a link */
+/* In your HTML, the image isn't currently inside an <a>, so this targets the image directly */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid rgb(255, 77, 0);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+img:hover, 
+img:focus {
+    border-color: rgb(2, 162, 255);
+    cursor: pointer;
+}
+
+/* 5. Shorten the default width of the paragraph element and ensure responsiveness */
+p {
+    max-width: 35rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Styling for lists and figures to match your previous CSS */
+ul {
+    max-width: 40rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-style: italic;
+}
