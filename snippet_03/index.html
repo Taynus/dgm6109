@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Style Guide - Project 1 (Updated)</title>
+  <title>Style Guide - Project 1 (Snippet 03)</title>
+  
   <link rel="stylesheet" href="main.css" />
-</head>
+
+  </head>
 <body>
 
   <header class="container">
@@ -39,6 +41,7 @@
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         <a href="https://www.lipsum.com/" target="_blank">Vivamus volutpat</a> risus fringilla, pellentesque risus sed, blandit urna. 
+        Aenean tincidunt, eros pellentesque lobortis cursus.
       </p>
     </section>
 
@@ -67,11 +70,11 @@
     <section id="image">
       <h2 class="section-title">Image</h2>
       <div class="grid image-grid add-gutters">
-        <a href="https://images.unsplash.com/" target="_blank" class="img-link">
-          <div class="img/vancouver1.png"></div>
+        <a href="https://images.unsplash.com/photo-1560813962-ff3d8fcf59ba" target="_blank" class="img-link">
+          <img src="img/vancouver1.png" alt="Vancouver Skyline" class="image-van">
         </a>
-        <a href="https://images.unsplash.com/" target="_blank" class="img-link">
-          <div class="img/vancouver2.png"></div>
+        <a href="https://images.unsplash.com/photo-1567705781280-0e03ffb323f4" target="_blank" class="img-link">
+          <img src="img/vancouver2.png" alt="Vancouver City View" class="image-van">
         </a>
       </div>
     </section>
@@ -80,14 +83,14 @@
       <h2 class="section-title">Input</h2>
       <div class="form-group">
         <label for="fname">First name</label>
-        <input type="text" id="fname" />
+        <input type="text" id="fname" placeholder="Enter your name" />
       </div>
       <div class="form-group">
         <label for="options">Options</label>
         <select id="options">
-          <option>Select an option</option>
-          <option>Option 1</option>
-          <option>Option 2</option>
+          <option value="">Select an option</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
         </select>
       </div>
     </section>
@@ -105,6 +108,21 @@
         </div>
         <div class="button-group">
           <button class="btn btn-1 selected">Button 1</button>
+          <span class="state-label">Selected</span>
+        </div>
+      </div>
+
+      <div class="grid button-grid add-gutters" style="margin-top: 2rem;">
+        <div class="button-group">
+          <button class="btn btn-2">Button 2</button>
+          <span class="state-label">Unselected</span>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-2 hover-sim">Button 2</button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-2 selected">Button 2</button>
           <span class="state-label">Selected</span>
         </div>
       </div>
