@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style Guide - Project 1 (Updated)</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <header class="container">
+    <h1 class="main-title">Style Guide</h1>
+    <p class="subtitle">This elements are part of the design style for the web</p>
+
+    <nav>
+      <div class="grid nav-grid add-gutters">
+        <a href="#typography" class="menu-btn">Typography</a>
+        <a href="#paragraph" class="menu-btn">Paragraph</a>
+        <a href="#colors" class="menu-btn">Colors</a>
+        <a href="#image" class="menu-btn">Image</a>
+        <a href="#input" class="menu-btn">Input</a>
+        <a href="#button" class="menu-btn">Button</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="typography">
+      <h2 class="section-title">Typography</h2>
+      <h1>H1 — Heading Large</h1>
+      <h2>H2 — Heading Medium</h2>
+      <h3>H3 — Heading Small</h3>
+      <h4>H4 — Heading Extra Small</h4>
+    </section>
+
+    <section id="paragraph">
+      <h2 class="section-title">Paragraph</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <a href="https://www.lipsum.com/" target="_blank">Vivamus volutpat</a> risus fringilla, pellentesque risus sed, blandit urna. 
+      </p>
+    </section>
+
+    <section id="colors">
+      <h2 class="section-title">Colors</h2>
+      <div class="grid color-grid add-gutters">
+        <div class="color-item">
+          <div class="swatch black"></div>
+          <p>Black<br><span>#000000</span></p>
+        </div>
+        <div class="color-item">
+          <div class="swatch white"></div>
+          <p>White<br><span>#FFFFFF</span></p>
+        </div>
+        <div class="color-item">
+          <div class="swatch grey"></div>
+          <p>Grey<br><span>#D8D8D8</span></p>
+        </div>
+        <div class="color-item">
+          <div class="swatch soft-grey"></div>
+          <p>Soft Grey<br><span>#E8E8E8</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="image">
+      <h2 class="section-title">Image</h2>
+      <div class="grid image-grid add-gutters">
+        <a href="https://images.unsplash.com/" target="_blank" class="img-link">
+          <div class="image-placeholder"></div>
+        </a>
+        <a href="https://images.unsplash.com/" target="_blank" class="img-link">
+          <div class="image-placeholder"></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="input">
+      <h2 class="section-title">Input</h2>
+      <div class="form-group">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" />
+      </div>
+      <div class="form-group">
+        <label for="options">Options</label>
+        <select id="options">
+          <option>Select an option</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="button">
+      <h2 class="section-title">Button</h2>
+      <div class="grid button-grid add-gutters">
+        <div class="button-group">
+          <button class="btn btn-1">Button 1</button>
+          <span class="state-label">Unselected</span>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-1 hover-sim">Button 1</button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-1 selected">Button 1</button>
+          <span class="state-label">Selected</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 · Style Guide Project1 · GitHub: snippet_03</p>
+  </footer>
+
+</body>
+</html>
