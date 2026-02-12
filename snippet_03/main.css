@@ -103,7 +103,7 @@ p a:hover, p a:focus {
 /* Size images */
 .img-link {
   display: block;
-  overflow: auto; 
+  overflow: hidden; 
   text-decoration: none;
 }
 
