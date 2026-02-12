@@ -1,7 +1,3 @@
-/*
-Responsive breakpoints (320px, 1024px, 1920px)
-*/
-
 * {
   box-sizing: border-box;
 }
@@ -9,9 +5,10 @@ Responsive breakpoints (320px, 1024px, 1920px)
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #e0e0e0;
+  background: #e0e0e0; /* Color background */
   color: #000;
   padding: 1rem;
+  line-height: 1.6;
 }
 
 .container {
@@ -19,6 +16,7 @@ body {
   margin: 0 auto;
 }
 
+/* Grind */
 .grid {
   display: grid;
 }
@@ -27,9 +25,7 @@ body {
   grid-gap: 1rem;
 }
 
-/*
-Mobile (320px)
-*/
+/* Mobile (320px) */
 @media (min-width: 20rem) {
   .nav-grid { grid-template-columns: 1fr 1fr; }
   .color-grid { grid-template-columns: 1fr 1fr; }
@@ -37,9 +33,7 @@ Mobile (320px)
   .button-grid { grid-template-columns: 1fr; }
 }
 
-/*
-Desktop (1024px)
-*/
+/* Desktop (1024px) */
 @media (min-width: 64rem) {
   body { padding: 2rem; }
   .container { max-width: 65rem; }
@@ -49,17 +43,13 @@ Desktop (1024px)
   .button-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/*
-Large screen (1920px)
-*/
+/* Large Screen (1920px) */
 @media (min-width: 120rem) {
   .container { max-width: 90rem; }
   body { font-size: 1.2rem; }
 }
 
-/* 
-Interactive elements
-*/
+/* navbar */
 .menu-btn {
   text-decoration: none;
   color: #555;
@@ -67,69 +57,106 @@ Interactive elements
   padding: 0.6rem;
   border: 1px solid #999;
   text-align: center;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .menu-btn:hover, .menu-btn:focus {
   background: #000;
   color: #fff;
-  outline: 2px solid #000000; /* Clear focus feedback */
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-/*
-Style
-*/
+/* Type */
 .section-title {
   font-size: 1.5rem;
   border-bottom: 1px solid #000;
-  margin: 2rem 0 1rem;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
-h1 { font-size: 3rem; }
-p a { color: blue; }
-p a:hover { color: rgb(255, 0, 217); }
+h1 { font-size: 3.5rem; margin: 0.5rem 0; }
+h2 { font-size: 2rem; margin: 0.5rem 0; }
+h3 { font-size: 1.4rem; margin: 0.5rem 0; }
+h4 { font-size: 1rem; margin: 0.5rem 0; }
 
+p a {
+  color: blue;
+  transition: color 0.3s;
+}
+
+p a:hover, p a:focus {
+  color: rgb(255, 0, 217);
+  text-decoration: none;
+}
+
+/* Img */
+.image-van {
+  width: 600px;
+  height: 600px;
+  object-fit: cover; /* Mantiene la proporción sin deformar */
+  border: 2px solid #000;
+  display: block;
+}
+
+.img-link {
+  display: block;
+  overflow: auto; 
+  text-decoration: none;
+}
+
+/* Colors */
 .swatch {
   width: 100%;
   height: 4rem;
   border: 1px solid #000;
 }
+
 .black { background: #000; }
 .white { background: #fff; }
 .grey { background: #d8d8d8; }
 .soft-grey { background: #e8e8e8; }
 
-.image-placeholder {
-  width: 100%;
-  height: 12rem;
-  border: 1px solid #000;
-  background: #eee;
-  position: relative;
-}
-
 /* Form */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
+  max-width: 18rem;
 }
+
+input, select {
+  padding: 0.5rem;
+  border: 1px solid #000;
+  background: #fff;
+}
+
 input:focus, select:focus {
-  outline: 2px solid #ffffff;
+  outline: 2px solid #3b82f6;
 }
 
 /* Buttons */
 .btn {
-  padding: 0.6rem;
+  padding: 0.6rem 2rem;
   border: 1px solid #000;
   cursor: pointer;
   width: 100%;
 }
+
 .btn-1 { background: #d3d3d3; }
-.btn-1.hover-sim, .btn-1:hover { outline: 2px solid #000; }
+.btn-1.hover-sim { outline: 2px solid #000; }
 .btn-1.selected { background: #000; color: #fff; }
+
+.btn-2 { 
+  background: #d3d3d3; 
+  border-radius: 1.5rem; 
+}
+.btn-2.selected { background: #4b5d16; color: #fff; }
+
+.state-label { font-size: 0.8rem; margin-left: 0.5rem; }
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 0;
   border-top: 1px solid #999;
 }
