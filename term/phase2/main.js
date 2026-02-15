@@ -1,5 +1,10 @@
 "use strict"
 
+/**
+Data collection project, phase 2, W06
+Data Topic "As my daily	time spent cooking increases my kitchen skills increases. One other factor that could impact my kitchen skills is	my creative mindset".
+ */
+
 let mealDataObservations = [
     {   
         dish: "Chicken fajitas",
@@ -105,8 +110,8 @@ let mealDataObservations = [
         frequency: "Single",
         method: "Checkbox",
         repetitionCount: 1,
-        isNewRecipe: null,
-        mastery: null,
+        isNewRecipe: "",
+        mastery: "",
         location: "Eat Out",
         date: "2026-02-01",
         score: 0,
@@ -161,8 +166,8 @@ let mealDataObservations = [
         frequency: "Single",
         method: "Checkbox",
         repetitionCount: 1,
-        isNewRecipe: null,
-        mastery: null,
+        isNewRecipe: "",
+        mastery: "",
         location: "Eat Out",
         date: "2026-02-05",
         score: 0,
@@ -210,10 +215,8 @@ let mealDataObservations = [
         score: 5,
         outcentive: "Low",
         mood: "Not too inspired"
-    },
+    }
 ]; // End of the list of meal observations
-
 
 // console.log(JSON.stringify(mealDataObservations));
 showData(mealDataObservations);
-
