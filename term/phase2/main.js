@@ -1,9 +1,5 @@
 "use strict"
 
-/**
- * Variable principal que contiene todas las observaciones de recolección de datos.
- * Cada objeto representa una comida preparada o consumida.
- */
 let mealDataObservations = [
     {   
         dish: "Chicken fajitas",
@@ -214,7 +210,7 @@ let mealDataObservations = [
         score: 5,
         outcentive: "Low",
         mood: "Not too inspired"
-    }
+    },
 ]; // End of the list of meal observations
 
 
