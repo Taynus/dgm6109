@@ -49,9 +49,15 @@ let radiusScale = d3.scaleLinear()
 svg.selectAll("circle")
     .data(dataset)
     .join("circle")
-    .attr("cx", d => xScale(d.time))   
-    .attr("cy", d => yScale(d.mastery)) 
-    .attr("r", d => radiusScale(d.mood)) 
+    .attr("cx", function(d) { 
+        return xScale(d.time); 
+    })
+    .attr("cy", function(d) { 
+        return yScale(d.mastery); 
+    })
+    .attr("r", function(d) { 
+        return radiusScale(d.mood); 
+    })
     .attr("fill", "black")
     .attr("stroke", "white")
     .style("opacity", 0.7);
