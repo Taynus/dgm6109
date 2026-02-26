@@ -50,7 +50,7 @@ dataset.sort(function (a, b) {
     return b.time - a.time;
 });
 
-/* 2. Crear los círculos con 4 propiedades */
+/* Circles properties */
 svg.selectAll("circle")
     .data(dataset)
     .join("circle")
@@ -64,7 +64,6 @@ svg.selectAll("circle")
         return radiusScale(d.time);
     })
     .attr("fill", function (d) {
-        // Lógica condicional para la 4ta propiedad (Color)
         if (d.type == "meat") { return "#ff6666"; }
         else if (d.type == "legume") { return "#66ff66"; }
         else if (d.type == "pasta") { return "#1515ff"; }
