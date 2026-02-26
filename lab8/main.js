@@ -3,7 +3,7 @@
 /* Configuration variables: drawing */
 let svgWidth = 900;
 let svgHeight = 600;
-let margin = 65; // Extra margin for clear labels
+let margin = 80; // Extra margin for clear labels
 
 /* Resize container div */
 d3.select("#container").style("width", String(svgWidth) + "px");
@@ -25,9 +25,9 @@ let dataset = [
     { dish: "Spaghetti Bolognese", time: 20, mastery: 2, mood: 5, type: "pasta" },
     { dish: "Burgers & Fries", time: 25, mastery: 3, mood: 4, type: "meat" },
     { dish: "Tuna with rice", time: 23, mastery: 3, mood: 3, type: "meat" },
-    { dish: "Soup (Eat Out)", time: 0, mastery: 0, mood: 1, type: "soup" }
+    // { dish: "Soup (Eat Out)", time: 0, mastery: 0, mood: 1, type: "soup" }
     { dish: "Soup (Home)", time: 35, mastery: 2, mood: 4, type: "soup" }
-    { dish: "McDonalds (Eat Out)", time: 0, mastery: 0, mood: 1, type: "meat" }
+    // { dish: "McDonalds (Eat Out)", time: 0, mastery: 0, mood: 1, type: "meat" }
 ];
 
 /* Scales Map data values to pixel coordinates */
