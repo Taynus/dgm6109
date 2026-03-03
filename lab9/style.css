@@ -1,0 +1,46 @@
+/* style.css - General styles for Lab #9 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px #3498db;
+    padding-bottom: 10px;
+}
+
+.link-section {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.plot-link {
+    display: block;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.plot-link:hover {
+    background-color: #2980b9;
+}
