@@ -28,19 +28,18 @@ let dataset = [
     { dish: "Soup (Eat out)", time: 0, mastery: 0, mood: 0, type: "soup" },
     { dish: "Soup (Home)", time: 35, mastery: 2, mood: 4, type: "soup" },
     { dish: "McDonalds (Eat out)", time: 0, mastery: 0, mood: 1, type: "meat" },
+
 ];
 
-/* Visualization of cooking experiences on Array.filter()
-*/
-let highMoodData = dataset.filter(function(d) {
-    return d.mood >= 3; 
-});
+//Filter function
+function filterHighMastery(value) {
+    return value.mastery > 1; 
+}
 
-/* This prevents smaller circles from being hidden behind larger ones.
-*/
-highMoodData.sort(function(a, b) {
-    return b.time - a.time;
-});
+// Sort function
+let sortByTime = function (a, b) {
+    return b.time - a.time; 
+};
 
 /* Scales Map data values to pixel coordinates */
 
@@ -60,28 +59,27 @@ let radiusScale = d3.scaleLinear()
     .range([5, 25]);
 
 /* Create circles for each data point */
-highMoodData.sort(function (a, b) {
+dataset.sort(function (a, b) {
     return b.time - a.time;
 });
 
-/* 2. Crear los círculos con 4 propiedades */
-svg.selectAll("circle")
-    .data(highMoodData)
-    .join("circle")
-    .attr("cx", function (d) {
-        return xScale(d.mastery);
+let plot1Circles = svg.selectAll("circle.plot1")
+    .data(dataset.filter(filterHighMastery).sort(sortByTime)) // Conection filter data
+    .join("circle") // Draw from data
+    .classed("plot1", true) // Tags
+    .attr("cx", function (value) {
+        return xScale(value.mastery);
     })
-    .attr("cy", function (d) {
-        return yScale(d.mood);
+    .attr("cy", function (value) {
+        return yScale(value.mood);
     })
-    .attr("r", function (d) {
-        return radiusScale(d.time);
+    .attr("r", function (value) {
+        return radiusScale(value.time);
     })
-    .attr("fill", function (d) {
-        // Lógica condicional para la 4ta propiedad (Color)
-        if (d.type == "meat") { return "#ff6666"; }
-        else if (d.type == "legume") { return "#66ff66"; }
-        else if (d.type == "pasta") { return "#1515ff"; }
+    .attr("fill", function (value) {
+        if (value.type == "meat") { return "#ff6666"; }
+        else if (value.type == "legume") { return "#66ff66"; }
+        else if (value.type == "pasta") { return "#1515ff"; }
         else { return "#f2ff00"; }
     })
     .attr("stroke", "white")
@@ -105,6 +103,7 @@ svg.append("rect")
 //     .attr("y", margin)
 //     .attr("width", svgWidth - margin * 2)
 //     .attr("height", svgHeight - margin * 2);
+
 
 
 /* Title the axes and mark key coordinates */
