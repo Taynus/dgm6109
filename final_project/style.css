@@ -1,0 +1,340 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a7c59; /* Green */
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: #2d5a27;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.markets-link {
+    color: #2d5a27 !important;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    background-color: #d8f3dc;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 15%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    color: black;
+}
+
+.totebag {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.totebag img {
+    width: 60%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.btn-explore {
+    display: inline-block;
+    background-color: #4a7c59;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #386146;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 500px;
+        padding: 40px 20px 0 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-content {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .totebag {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+    }
+
+    .totebag img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+    }
+}
+
+/* Market Sections */
+
+.markets-banner {
+    background-color: #4a7c59;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.markets-banner h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 90%;
+}
+
+.market-section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #2d5a27;
+    font-size: 1.5rem;
+}
+
+.location-tag {
+    display: inline-block;
+    width: auto;
+    padding: 10px 25px;
+    text-align: center;
+    background-color: #4a7c59;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.location-tag:hover {
+    background-color: #23591c;
+    transform: scale(1.05);
+}
+
+/* Product Grid and Cards */
+
+.guide-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 30px 0;
+}
+
+.guide-title p {
+    color: #666;
+    font-size: 2rem; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #4a7c59;
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.disclaimer {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+/* Markets logos */
+
+.market-logo-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.market-logo-img {
+    width: auto;
+    height: 300px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.market-logo-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    min-height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* Estilos base para el botón (oculto en desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #4a7c59;
+    cursor: pointer;
+}
+
+/* Ocultar el link del menú en Desktop */
+.menu-toggle-link {
+    display: none;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #4a7c59;
+}
+
+@media (max-width: 768px) {
+    /* Mostrar el icono de hamburguesa en Mobile */
+    .menu-toggle-link {
+        display: block;
+    }
+
+    /* Ocultar la lista de links original en Mobile */
+    .nav-links {
+        display: none;
+    }
+
+    /* Ajuste del Hero para que no se corte la imagen */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .totebag img {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Grocerie Locator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para que el menú ocupe toda la pantalla */
+        .mobile-menu-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+        .mobile-menu-page ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+        .mobile-menu-page li {
+            margin: 25px 0;
+        }
+        .mobile-menu-page a {
+            font-size: 2rem;
+            color: #4a7c59;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-menu-page">
+        <a href="index.html" class="close-menu">✕</a>
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="asian.html">Asian</a></li>
+            <li><a href="european.html">European</a></li>
+            <li><a href="latam.html">Latam</a></li>
+            <li><a href="indian.html">Indian</a></li>
+            <li><a href="markets.html">📍 Markets</a></li>
+        </ul>
+    </div>
+</body>
+</html>
