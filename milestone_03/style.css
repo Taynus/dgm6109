@@ -51,37 +51,101 @@ body {
 }
 
 /* Hero Section */
+
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #d8f3dc; /* Soft green */
-    padding: 0 10%;
-    height: 400px;
+    background-color: #d8f3dc;
     width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 15%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    max-width: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.1;
-}
-
-.btn-explore {
-    background-color: #4a7c59;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    text-decoration: none;
-
+    color: black;
 }
 
 .totebag {
-    height: 350px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.totebag img {
+    width: 60%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.btn-explore {
+    display: inline-block;
+    background-color: #4a7c59;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #386146;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 500px;
+        padding: 40px 20px 0 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-content {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .totebag {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+    }
+
+    .totebag img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+    }
 }
 
 /* Market Sections */
@@ -229,4 +293,48 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 50px;
+}
+
+/* Estilos base para el botón (oculto en desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #4a7c59;
+    cursor: pointer;
+}
+
+/* Ocultar el link del menú en Desktop */
+.menu-toggle-link {
+    display: none;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #4a7c59;
+}
+
+@media (max-width: 768px) {
+    /* Mostrar el icono de hamburguesa en Mobile */
+    .menu-toggle-link {
+        display: block;
+    }
+
+    /* Ocultar la lista de links original en Mobile */
+    .nav-links {
+        display: none;
+    }
+
+    /* Ajuste del Hero para que no se corte la imagen */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .totebag img {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 30px;
+    }
 }
