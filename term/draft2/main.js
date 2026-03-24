@@ -127,7 +127,6 @@ for (let i = 0; i <= maxTime + 10; i = i + 5) {
 }
 
 // *************** Draw Shapes *************** //
-let unit = 8;
 
 let dishes = svg.selectAll("g.dish")
     .data(dataset)
