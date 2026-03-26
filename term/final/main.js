@@ -65,6 +65,27 @@ d3.json("data.json").then(function (dataset) {
         .attr("y2", yScale(-3))
         .attr("stroke", "black");
 
+    // *************** GRID - Fractions from 0.1 a 5 *************** //
+    // Loop to create the grid in X and Y axis
+
+    for (let i = 0; i <= 6; i = i + 0.1) {
+        svg.append("line")
+            .attr("x1", xScale(i))
+            .attr("y1", yScale(maxTime + 10))
+            .attr("x2", xScale(i))
+            .attr("y2", yScale(-3))
+            .attr("stroke", "#e0e0e0")
+    };
+
+    for (let i = 0; i <= maxTime + 10; i = i + 5) {
+        svg.append("line")
+            .attr("x1", xScale(0))
+            .attr("y1", yScale(i))
+            .attr("x2", xScale(6))
+            .attr("y2", yScale(i))
+            .attr("stroke", "#e0e0e0")
+    }
+
     // *************** Draw Shapes *************** //
 
     let dishes = svg.selectAll("g.dish")
@@ -99,27 +120,6 @@ d3.json("data.json").then(function (dataset) {
         })
         .attr("stroke", "white")
         .style("opacity", 0.8);
-
-    // *************** GRID - Fractions from 0.1 a 5 *************** //
-    // Loop to create the grid in X and Y axis
-
-    for (let i = 0; i <= 6; i = i + 0.1) {
-        svg.append("line")
-            .attr("x1", xScale(i))
-            .attr("y1", yScale(maxTime + 10))
-            .attr("x2", xScale(i))
-            .attr("y2", yScale(-3))
-            .attr("stroke", "#e0e0e0")
-    };
-
-    for (let i = 0; i <= maxTime + 10; i = i + 5) {
-        svg.append("line")
-            .attr("x1", xScale(0))
-            .attr("y1", yScale(i))
-            .attr("x2", xScale(6))
-            .attr("y2", yScale(i))
-            .attr("stroke", "#e0e0e0")
-    }
 
     // *************** X AXIS VALUES (Mood) *************** //
     for (let i = 0; i <= 5; i = i + 1) { // Range 0 a 5
